@@ -1,0 +1,57 @@
+.footer
+  background-color: $black-light
+  color: $gray-100
+  &__inner
+    +flex(flex-start, normal, row, wrap)
+    padding-top: 45px
+    padding-bottom: 45px
+    +lg
+      padding-top: 30px
+      padding-bottom: 30px
+    +md
+      padding-top: 20px
+      padding-bottom: 20px
+    +sm
+      padding-top: 15px
+      padding-bottom: 15px
+  &__logo
+    margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__text
+    padding-bottom: 15px
+    font-size: $fz-xs
+    p
+      margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+      p
+        margin-bottom: 15px
+  &__auth
+    color: $white
+    a
+      +tr(color .3s)
+      +hover
+        color: $accent
+  &__title
+    margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__left
+    width: percentage(3/12)
+    padding-right: 15px
+  &__right
+    width: percentage(9/12)
+    padding-left: 15px
+    +flex
+  &__block
+    // &:nth-child(1)
+    // &:nth-child(2)
+    // &:nth-child(3)
+    flex: 0 0 240px
+    &:last-child
+      flex-grow: 1

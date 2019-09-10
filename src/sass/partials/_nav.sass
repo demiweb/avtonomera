@@ -3,6 +3,16 @@
     display: inline-block
     margin-left: 25px
     margin-right: 25px
+    +xll
+      margin-left: 15px
+      margin-right: 15px
+    +xl
+      margin-left: 10px
+      margin-right: 10px
+    +lg
+      margin: 0
+      display: block
+      margin-bottom: 15px
     &.has-dropdown
       position: relative
       > a
@@ -25,6 +35,33 @@
     &.is-active
       color: $white-darken
 
+  &--footer
+    li
+      margin: 0
+      display: block
+      margin-bottom: 20px
+      +md
+        margin-bottom: 10px
+    a
+      +hover
+        text-decoration: underline
+    .icon
+      position: relative
+      top: .1em
+      margin-right: 10px
+      +md
+        margin-right: 10px
+  &--50
+    ul
+      +flex(flex-start, normal, row, wrap)
+    li
+      width: 50%
+    img
+      +notlast
+        margin-right: 10px
+        +md
+          margin-right: 5px
+
 .nav-tooltip
   padding-top: 15px
   font-weight: 500
@@ -36,10 +73,24 @@
     position: absolute
     top: 0
     left: 50px
+  +lg
+    position: static
+    visibility: visible
+    opacity: 1
+    padding-top: 0
+    color: inherit
+    +before
+      display: none
+  +xs
+    width: 100%
   ul
     padding: 25px
     background-color: $white
     +flex(flex-start, normal, row, wrap)
+    +lg
+      background-color: transparent
+      padding: 0
+      padding-top: 10px
   li
     width: 50%
     padding-right: 10px

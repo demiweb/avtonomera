@@ -3,16 +3,29 @@
   position: relative
   color: $white
   +cover
+  +lg
+    padding-top: $header-height-lg
+  +sm
+    padding-top: $header-height-sm
+  +xs
+    padding-bottom: 15px
   &__content
     +flex(center, normal, column)    
     padding-top: 25px
     padding-bottom: 25px
+    +xs
+      margin-bottom: 15px
     html:not(.is-ie) &
       min-height: calc(100vh - #{$header-height})
+      +xs
+        min-height: 0
     .is-ie &
       height: calc(100vh - #{$header-height})
+      +xs
+        height: auto
   &__img
     +flex(center, normal, column)
+    height: 100%
   &__title
     margin-bottom: 25px
     +md
@@ -23,6 +36,11 @@
       margin-bottom: 25px
   &__btns
     +flex()
+    +xl
+      display: block
   &__btn
     +notlast
       margin-right: 15px
+      +xl
+        margin-right: 0
+        margin-bottom: 15px

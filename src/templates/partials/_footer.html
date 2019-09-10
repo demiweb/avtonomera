@@ -64,14 +64,14 @@
           <div class="footer__nav">
             {{ mixins.list(
               name = '',
-              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              modifications = { wrap: 'nav nav--footer nav--50', item: '', link: '' },
               list = [
                 { link: mixins.icon('mail') + 'Avtonomera.ua@gmail.com', href: 'mailto:Avtonomera.ua@gmail.com' },
-                { item: mixins.icon('placeholder') + 'Киев, Бул. Леси Украинки, 54' },
-                { item: mixins.icon('clock-2') + '9:00 - 19:00 (Пн - Пт)' },
                 { link: mixins.icon('smartphone') + '+38 (097) 444  - 44 - 44', href: 'tel:+380974444444' },
+                { item: mixins.icon('placeholder') + 'Киев, Бул. Леси Украинки, 54' },
                 { link: mixins.icon('smartphone') + '+38 (068) 315 - 25 - 25', href: 'tel:+380683152525' },
-                { item: '<img class="js-lazy" alt="" data-src="./img/visa.svg"/><img class="js-lazy" alt="" data-src="./img/mastercard.svg"/>' }
+                { item: mixins.icon('clock-2') + '9:00 - 19:00 (Пн - Пт)' },   
+                { item: '<img class="js-lazy" alt="" width="30" height="27" data-src="./img/visa.svg"/><img class="js-lazy" width="30" height="27" alt="" data-src="./img/mastercard.svg"/>' }
               ]
             ) }}
           </div>

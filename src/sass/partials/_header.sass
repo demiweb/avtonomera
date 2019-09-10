@@ -1,23 +1,91 @@
 .header
   position: fixed
-  z-index: 10
+  z-index: 15
   left: 0
   right: 0
   top: 0
-  background-color: transparent
-  
+  background-color: transparent  
   color: $white
+  +tr(background-color .3s)
   &__inner
     +flex(flex-start, center)
     height: $header-height
     padding-top: 25px
     padding-bottom: 25px
+    +lg
+      padding-top: 15px
+      padding-bottom: 15px
+      height: $header-height-lg
+    +sm
+      padding-top: 10px
+      padding-bottom: 10px
+      height: $header-height-sm
   &__logo
     margin-right: 60px
+    +xll
+      margin-right: 40px
+    +xl
+      margin-left: 0px
+    +lg
+      flex-grow: 1
   &__nav
     flex-grow: 1
+    +lg
+      position: fixed
+      z-index: 15
+      width: 100%
+      height: 100%
+      overflow: auto
+      padding: 15px
+      background-color: $black-light
+      top: 0
+      left: 0
+      +vertical
+      // opacity: 0
+      // visibility: hidden
+      transform: translate(-100%, 0)
+      +ready
+        +tr(opacity .3s, visibility .3s, transform .3s)
+      &.is-active
+        transform: translate(0, 0)
+        // opacity: 1
+        // visibility: visible
+
+  &__nav-in
+    +lg
+      display: inline-block
+      vertical-align: middle
+      font-size: $fz
+      +sm
+        font-size: $fz-sm
   &__phone
     margin-left: 60px
+    padding-top: 4px
+    +xll
+      margin-left: 40px
+    +xl
+      margin-left: 0px
+  &__burger
+    display: none
+    margin-left: 15px
+    +lg
+      display: block
+    +xs
+      margin-left: 10px
+  &__close
+    +icon-close(20, 1, currentColor)
+    display: none
+    position: absolute
+    top: 15px
+    right: 15px
+    z-index: 1
+    +lg
+      display: block
+
+  &.is-scrolled
+    background-color: rgba($black, .7)
+    // color: $c-text
+
 
 .header-phone
   +inline-flex(flex-start, center)
@@ -27,16 +95,51 @@
     margin-right: 10px
     background-color: $accent
     border-radius: 50%
-    width: 35px
-    height: 35px
-    flex: 0 0 35px
+    width: 2.3em
+    height: 2.3em
+    flex: 0 0 2.3em
     position: relative
     .icon
       font-size: 21px
       +vcenter
+    +xss
+      margin-right: 0
   &__title
     display: block
     border-top: 1px solid $gray-dark
     border-bottom: 1px solid $gray-dark
     padding-top: 5px
     padding-bottom: 5px
+    +xss
+      display: none
+
+.burger 
+  display: block
+  width: 28px
+  height: 28px
+  // margin-top: -24px
+  position: relative
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+  span:after
+    top: 5px
+  span:before
+    bottom: 5px
+  span 
+    // position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: currentColor
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  // &.is-active span 
+  //   background-color: transparent
+  // &.is-active span:before 
+  //   transform: rotate(45deg) translate(-1px, 0px)
+  // &.is-active span:after 
+  //   transform: rotate(-45deg) translate(6px, -7px)

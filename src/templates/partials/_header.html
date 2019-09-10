@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header">
+<header class="header js-header">
   <div class="container">
     <div class="header__inner">
       <div class="header__logo">
@@ -8,8 +8,12 @@
         </a>
       </div>
 
-      <div class="header__nav">
-        {% include "partials/_nav.html" %}
+      <div class="header__nav js-menu">
+        <button class="header__close js-menu-close"></button>
+
+        <div class="header__nav-in">
+          {% include "partials/_nav.html" %}
+        </div>
       </div>
 
       <div class="header__phone">
@@ -17,6 +21,10 @@
           <span class="header-phone__icon">{{ mixins.icon('call-answer') }}</span>
           <span class="header-phone__title">+38 (097) 444 - 44 - 44</span>
         </a>
+      </div>
+
+      <div class="header__burger">
+        <button class="burger js-burger"><span></span></button>
       </div>
     </div>
   </div>
