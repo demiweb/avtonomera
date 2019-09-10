@@ -1,0 +1,104 @@
+{%set
+types = [
+  {
+    title: 'Стандартные номера',
+    img: '01.png',
+    price: '<strong>250</strong> грн/шт.'
+  },
+  {
+    title: 'Европейские номера',
+    img: '02.png',
+    price: '<strong>250</strong> грн/шт.'
+  },
+  {
+    title: 'Мото номера',
+    img: '03.png',
+    price: '<strong>300</strong> грн/шт.'
+  },
+  {
+    title: 'Американские номера',
+    img: '04.png',
+    price: '<strong>500</strong> грн/шт.'
+  },
+  {
+    title: 'Дипломатические номера',
+    img: '05.png',
+    price: '<strong>250</strong> грн/шт.'
+  },
+  {
+    title: 'Военные МЧС номера',
+    img: '06.png',
+    price: '<strong>250</strong> грн/шт.'
+  },
+  {
+    title: 'Именные номера',
+    img: '07.png',
+    price: '<strong>1700</strong> грн/шт.'
+  },
+  {
+    title: 'Пассажирские номера',
+    img: '08.png',
+    price: '<strong>250</strong> грн/шт.'
+  },
+  {
+    title: 'Номера для мопедов',
+    img: '09.png',
+    price: '<strong>300</strong> грн/шт.'
+  },
+  {
+    title: 'Номера для прицепов',
+    img: '10.png',
+    price: '<strong>250</strong> грн/шт.'
+  },
+  {
+    title: 'Номера для грузовиков',
+    img: '11.png',
+    price: '<strong>250</strong> грн/шт.'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    
+        <div class="section__title">
+          <h2 class="title">Виды <span class="accent">номеров</span></h2>
+        </div>
+
+        <div class="section__subttl">
+          Компания «Avtonomera» предлагает для водителей Украины большой
+выбор автономеров разных стран, годов и типов
+        </div>
+      
+
+    <!-- begin types -->
+    <div class="types">
+      <div class="row justify-content-center">
+        {% for i in types %}
+        <div class="col-3">
+          <!-- begin type-link -->
+          <a href="#" class="type-link">
+            <span class="type-link__content">
+              <span class="type-link__title">
+                <span class="title title--h5">{{ i.title | safe }}</span>
+              </span>
+
+              <span class="type-link__img js-lazy" data-background-image="./img/types/{{ i.img }}">
+                {# <img class="js-lazy" alt="" data-src="./img/types/{{ i.img }}"/> #}
+              </span>
+            </span>
+
+            <span class="type-link__price">
+              <span class="price">{{ i.price | safe }}</span>
+            </span>
+          </a>
+          <!-- end type-link -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end types -->
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,53 @@
+{%set
+projects = [
+  {
+    img: '01.jpg',
+    title: '<div class="title title--h2 title--yellow title--u">Primeauto.ua</div>',
+    text: 'Автоаксессуары в Киеве – надежное качество 
+по лучшей цене'
+  },
+  {
+    img: '02.jpg',
+    title: '<div class="title title--h3 title--yellow title--u">Weathertech-ukraine.com.ua</div>',
+    text: 'Премиум  коврики для тех, кто ценит комфорт 
+и превосходство.'
+  },
+  {
+    img: '03.jpg',
+    title: '<div class="title title--h2 title--yellow title--u">Autolend.com.ua</div>',
+    text: 'Аксессуары и комплектующие пикапов'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-sml pb-sml">
+  <div class="container">
+    <div class="section__title section__title-mb-lg">
+      <h2 class="title">Не пропустите другие наши проекты</h2>
+    </div>
+
+    <!-- begin projects -->
+    <div class="projects">
+      <div class="row">
+        {% for i in projects %}
+        <div class="col-4">
+          <!-- begin project-link -->
+          <a href="#" class="project-link js-lazy" data-background-image="./img/projects/{{ i.img }}">
+            <span class="project-link__content">
+              <span class="project-link__title">{{ i.title | safe }}</span>
+
+              <span class="project-link__text">{{ i.text | safe }}</span>
+
+              <span class="project-link__link link">Перейти</span>
+            </span>
+          </a>
+          <!-- end project-link -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end projects -->
+  </div>
+</section>
+<!-- end section -->

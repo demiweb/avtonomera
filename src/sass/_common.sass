@@ -3,9 +3,11 @@ body
   line-height: 1.4
   font-size: $fz
   min-width: 320px
-  font-family: 'proximanova', Arial, sans-serif
+  font-family: 'montserrat', Arial, sans-serif
   color: $c-text
   +no-scroll
+  +sm
+    font-size: $fz-sm
 
 .icon
   display: inline-block
@@ -15,4 +17,39 @@ body
 .lazy
   &.is-loaded:not(.no-animation)
     animation: fadeIn 1s
+
+.container
+  max-width: 1440px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
     
+.logo
+  display: inline-block
+  font-size: 0
+
+.tooltip
+  position: absolute
+  z-index: 1
+  visibility: hidden
+  opacity: 0
+  top: 100%
+  left: 0
+
+.price
+  strong
+    color: $accent
+    font-size: 1.6em
+
+.link
+  font-weight: 700
+  +after
+    border-top: 1px solid currentColor
+    width: 50px
+    display: inline-block
+    margin-left: 15px
+    position: relative
+    top: -.2em
+    +sm
+      margin-left: 10px

@@ -1,0 +1,48 @@
+.step
+  text-align: center
+  &__img
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    padding-top: 60%
+    position: relative
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    +before
+      border-radius: 50%
+      background-color: $white-dark
+      +vcenter
+      z-index: -1
+      width: 1em
+      height: 1em
+      font-size: 210px
+  &__title
+    margin-bottom: 10px
+    +md
+      margin-bottom: 5px
+  &__text
+    a
+      color: $blue
+      text-decoration: underline
+
+
+.doc-item
+  position: relative
+  padding-left: 40px
+  text-align: center
+  &__nmb
+    color: $white-dark
+    font-size: 84px
+    font-weight: 700
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    +flex(flex-start, center)
+  &__img
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    padding-top: 60%
+    margin-bottom: 15px

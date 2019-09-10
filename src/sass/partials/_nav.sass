@@ -1,0 +1,51 @@
+.nav
+  li
+    display: inline-block
+    margin-left: 25px
+    margin-right: 25px
+    &.has-dropdown
+      position: relative
+      > a
+        position: relative
+        display: inline-block
+        +after
+          +arr(10, 5, currentColor, b)
+          position: relative
+          top: .8em
+          margin-left: 5px
+      &:hover
+        .tooltip
+          visibility: visible
+          opacity: 1
+
+  a
+    +tr(color .3s)
+    +hover
+      color: $white-darken
+    &.is-active
+      color: $white-darken
+
+.nav-tooltip
+  padding-top: 15px
+  font-weight: 500
+  color: $gray-dark
+  width: 465px
+  font-size: $fz-sm
+  +before
+    +arr(20, 15, $white, t)
+    position: absolute
+    top: 0
+    left: 50px
+  ul
+    padding: 25px
+    background-color: $white
+    +flex(flex-start, normal, row, wrap)
+  li
+    width: 50%
+    padding-right: 10px
+    margin: 0
+    margin-bottom: 20px
+  a
+    +hover
+      text-decoration: underline
+      color: $gray

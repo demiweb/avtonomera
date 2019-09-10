@@ -1,0 +1,42 @@
+.header
+  position: fixed
+  z-index: 10
+  left: 0
+  right: 0
+  top: 0
+  background-color: transparent
+  
+  color: $white
+  &__inner
+    +flex(flex-start, center)
+    height: $header-height
+    padding-top: 25px
+    padding-bottom: 25px
+  &__logo
+    margin-right: 60px
+  &__nav
+    flex-grow: 1
+  &__phone
+    margin-left: 60px
+
+.header-phone
+  +inline-flex(flex-start, center)
+  font-weight: 700
+  &__icon
+    display: block
+    margin-right: 10px
+    background-color: $accent
+    border-radius: 50%
+    width: 35px
+    height: 35px
+    flex: 0 0 35px
+    position: relative
+    .icon
+      font-size: 21px
+      +vcenter
+  &__title
+    display: block
+    border-top: 1px solid $gray-dark
+    border-bottom: 1px solid $gray-dark
+    padding-top: 5px
+    padding-bottom: 5px

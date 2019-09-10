@@ -1,5 +1,24 @@
 <!-- begin header -->
 <header class="header">
-  hello from header
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="/" class="logo">
+          <img class="js-lazy" alt="" data-src="./img/logo.png"/>
+        </a>
+      </div>
+
+      <div class="header__nav">
+        {% include "partials/_nav.html" %}
+      </div>
+
+      <div class="header__phone">
+        <a href="tel:+380974444444" class="header-phone">
+          <span class="header-phone__icon">{{ mixins.icon('call-answer') }}</span>
+          <span class="header-phone__title">+38 (097) 444 - 44 - 44</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
 <!-- end header -->

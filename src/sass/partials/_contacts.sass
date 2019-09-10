@@ -1,0 +1,32 @@
+.contacts
+  &__right
+    padding-left: 45px
+  &__left
+    +flex(center, normal, column)
+    height: 100%
+
+.contacts-block
+  text-align: center
+  &__block
+    
+    margin-bottom: 35px
+    +lg
+      margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__text
+    a
+      +tr(color .3s)
+      +hover
+        color: $accent
+  &__title
+    margin-bottom: 10px
+    +md
+      margin-bottom: 5px
+
+.map
+  position: relative
+  padding-top: 50%
+  iframe
+    +coverdiv
+    z-index: 1

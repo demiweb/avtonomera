@@ -1,5 +1,83 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__logo">
+          <a href="/" class="logo">
+            <img class="js-lazy" alt="" data-src="./img/logo.png"/>
+          </a>
+        </div>
+
+        <div class="footer__text">
+          <p>Занимаемся производством автомобильных
+          номеров в Украине с 1997 года</p>
+
+          2019 &copy; Все права защищены
+        </div>
+
+        <div class="footer__auth">Разработка сайта <a href="#">«Demiweb International»</a></div>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__block">
+          <div class="footer__title">
+            <div class="title title--h5 title--white">Информация</div>
+          </div>
+
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Главная' },
+                { link: 'Почему мы' },
+                { link: 'Как происходит заказ' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="footer__block">
+          <div class="footer__title">
+            <div class="title title--h5 title--white">Клиенту</div>
+          </div>
+
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Автономера' },
+                { link: 'Заказать' },
+                { link: 'Доставка и оплата' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="footer__block">
+          <div class="footer__title">
+            <div class="title title--h5 title--white">Контакты</div>
+          </div>
+
+          <div class="footer__nav">
+            {{ mixins.list(
+              name = '',
+              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              list = [
+                { link: mixins.icon('mail') + 'Avtonomera.ua@gmail.com', href: 'mailto:Avtonomera.ua@gmail.com' },
+                { item: mixins.icon('placeholder') + 'Киев, Бул. Леси Украинки, 54' },
+                { item: mixins.icon('clock-2') + '9:00 - 19:00 (Пн - Пт)' },
+                { link: mixins.icon('smartphone') + '+38 (097) 444  - 44 - 44', href: 'tel:+380974444444' },
+                { link: mixins.icon('smartphone') + '+38 (068) 315 - 25 - 25', href: 'tel:+380683152525' },
+                { item: '<img class="js-lazy" alt="" data-src="./img/visa.svg"/><img class="js-lazy" alt="" data-src="./img/mastercard.svg"/>' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

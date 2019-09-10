@@ -1,0 +1,28 @@
+{{ mixins.list(
+  name = 'nav',
+  modifications = { wrap: '', item: '', link: '' },
+  list = [
+    { link: 'Автономера', modItem: 'has-dropdown', item: mixins.list(
+      name = 'tooltip nav-tooltip',
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+        { link: 'Стандартные' },
+        { link: 'Военные МЧС' },
+        { link: 'Европейские' },
+        { link: 'Именные' },
+        { link: 'Для мототехники' },
+        { link: 'Пассажирские' },
+        { link: 'Американские' },
+        { link: 'Для мопедов' },
+        { link: 'Дипломатические' },        
+        { link: 'Для прицепов' },
+        { link: 'Для грузовиков' }
+      ]
+    ) },
+    { link: 'Документы', modLink: 'is-active' },
+    { link: 'Преимущества' },
+    { link: 'Доставка и оплата' },
+    { link: 'Страховка' },
+    { link: 'Контакты' }
+  ]
+) }}

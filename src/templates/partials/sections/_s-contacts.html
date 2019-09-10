@@ -1,0 +1,74 @@
+{%set
+contacts = [
+  {
+    title: 'Телефон',
+    text: '<p><a href="tel:+380974444444">+38 (097) 444 - 44 - 44</a></p><p><a href="tel:+380683152525">+38 (068) 315 - 25 - 25</a></p>'
+  },
+  {
+    title: 'Адрес',
+    text: 'Киев, Бул. Леси Украинки, 54'
+  },
+  {
+    title: 'E-mail',
+    text: '<a href="mailto:Avtonomera.ua@gmail.com">Avtonomera.ua@gmail.com</a>'
+  },
+  {
+    title: 'График работы',
+    text: '9:00 - 19:00 (Пн - Пт)'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-md pb-md">
+  <div class="container">
+    <div class="section__title section__title-mb-lg">
+      <h2 class="title">Контактная <span class="accent">информация</span></h2>
+    </div>
+
+    <!-- begin contacts -->
+    <div class="contacts">
+      <div class="row">
+        <div class="col-3">
+          <div class="contacts__left">
+            <!-- begin contacts-block -->
+            <div class="contacts-block">
+              <div class="contacts-block__content">
+                {% for i in contacts %}
+                <div class="contacts-block__block">
+                  <div class="contacts-block__title">
+                    <div class="title title--h5">{{ i.title | safe }}</div>
+                  </div>
+
+                  <div class="contacts-block__text">{{ i.text | safe }}</div>
+                </div>
+                {% endfor %}
+
+                <div class="contacts-block__btn">
+                  {{ mixins.btn(
+                    title = 'Перезвоните мне',
+                    mod = '',
+                    href = false
+                  ) }}
+                </div>
+              </div>
+            </div>
+            <!-- end contacts-block -->
+          </div>
+        </div>
+
+        <div class="col-9">
+          <div class="contacts__right">
+            <!-- begin map -->
+            <div class="map">
+              <iframe class="js-lazy" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5084.280252000586!2d30.545372214904148!3d50.419860821604395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf6c571a1b55%3A0x9d7c70855874ab1a!2z0LHRg9C70YzQstCw0YAg0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1568112078626!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            <!-- end map -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end contacts -->
+  </div>
+</section>
+<!-- end section -->

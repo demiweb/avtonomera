@@ -1,0 +1,103 @@
+{%set
+steps = [
+  {
+    img: '01.png',
+    title: 'Оставляете заявку',
+    text: 'На сайте или звоните нам по <br>
+телефонам в разделе <a href="#">Контакты</a>.'
+  },
+  {
+    img: '02.png',
+    title: 'Предоплат а и изготовление',
+    text: 'Срок выполнения вашего заказа составит <br>
+5 минут. Изготовление начнем сразу <br>
+после 100% предоплаты.'
+  },
+  {
+    img: '03.png',
+    title: 'Получаете готовые номера',
+    text: 'Есть возможность самовывоза из нашего офиса. <br>
+Доставка Новой Почтой или курьером <br>
+по вашему адресу.'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__block">
+          <div class="section__title">
+            <h2 class="title">Порядок выполнения <span class="accent">заказа</span></h2>
+          </div>
+
+          <div class="section__subttl">Нам важно снять все вопросы еще до их появления, поэтому
+          мы описали все этапы получения номеров ниже</div>
+    
+
+      <!-- begin steps -->
+      <div class="steps">
+        <div class="row">
+          {% for i in steps %}
+          <div class="col-4">
+            <!-- begin step -->
+            <div class="step">
+              <div class="step__img js-lazy" data-background-image="./img/order/{{ i.img }}"></div>
+
+              <div class="step__content">
+                <div class="step__title">
+                  <div class="title title--h3">{{ i.title | safe }}</div>
+                </div>
+
+                <div class="step__text">{{ i.text | safe }}</div>
+              </div>
+            </div>
+            <!-- end step -->
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- end steps -->
+    </div>
+
+    <div class="section__block">
+          <div class="section__title">
+            <h2 class="title">Необходимые <span class="accent">документы</span></h2>
+          </div>
+
+          <div class="section__subttl">Оформление пройдет быстро и гладко, вам всего лишь нужно
+подготовить пару документов</div>
+
+      <!-- begin docs -->
+      <div class="docs">
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <!-- begin doc-item -->
+            <div class="doc-item">
+              <div class="doc-item__nmb">1</div>
+              <div class="doc-item__img js-lazy" data-background-image="./img/docs/01.png"></div>
+              <div class="doc-item__text">Оригинал тех.паспорта
+(Или его фото)</div>
+            </div>
+            <!-- end doc-item -->
+          </div>
+
+          <div class="col-3 offset-1">
+            <!-- begin doc-item -->
+            <div class="doc-item">
+              <div class="doc-item__nmb">2</div>
+              <div class="doc-item__img js-lazy" data-background-image="./img/docs/02.png"></div>
+              <div class="doc-item__text">Паспорт или права 
+(или другой документ, который 
+подтверждает вашу личность)</div>
+            </div>
+            <!-- end doc-item -->
+
+          </div>
+        </div>
+      </div>
+      <!-- end docs -->
+    </div>
+  </div>
+</section>
+<!-- end section -->

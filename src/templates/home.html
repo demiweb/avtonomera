@@ -1,0 +1,69 @@
+---
+title: Index page
+page: home
+hero: {
+  bg: 'bg-hero-home.jpg',
+  title: 'Официальное изготовление
+автономеров в Украине',
+  text: 'Изготовление автомобильных номеров в Киеве и Украине от 250 грн. 
+Срок изготовления - 5 минут. Быстрое оформление.
+Доставка по Киеву курьером и по Украине Новой Почтой.',
+  btns: [
+    {
+      title: 'Выбрать автономера'
+    },
+    {
+      title: 'Хочу получить консультацию',
+      mod: 'btn--transp-white'
+    }
+  ],
+  img: 'hero-img.png'
+}
+features: {
+  list: [
+    {
+      icon: 'like',
+      title: 'Качественное',
+      text: 'изготовление номеров
+с гарантией'
+    },
+    {
+      icon: 'clock',
+      title: 'Быстрое',
+      text: 'производство новых и замена
+старых номеров'
+    },
+    {
+      icon: 'document',
+      title: 'Официальное',
+      text: 'выполнение всех работ,
+оформление не займет больше 20 минут'
+    },
+    {
+      icon: 'vip',
+      title: 'Индивидуальное',
+      text: 'изготовление по желанию'
+    },
+    {
+      icon: 'purse',
+      title: 'Конкурентноспособное',
+      text: 'ценообразование на наши услуги'
+    },
+    {
+      icon: 'box',
+      title: 'Удобная',
+      text: 'система оплаты и доставки'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-types.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-steps.html" %}
+  {% include "partials/sections/_s-projects.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}
