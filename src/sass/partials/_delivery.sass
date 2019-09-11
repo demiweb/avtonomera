@@ -1,0 +1,60 @@
+.delivery
+  max-width: 1050px
+  margin-left: auto
+  margin-right: auto
+  +flex(space-between, normal, row, wrap)
+  +lg
+    margin-left: -10px
+    margin-right: -10px
+  &__item
+    width: percentage(4/9)
+    +lg
+      width: 50%
+      padding-left: 10px
+      padding-right: 10px
+
+.delivery-item
+  position: relative
+  padding-left: 120px
+  padding-top: 45px
+  +xl
+    padding-left: 100px
+  +lg
+    padding-left: 80px
+  +md
+    padding-left: 60px
+  +xs
+    // padding-left: 40px
+    padding-left: 0
+    padding-top: 30px
+  &__nmb
+    position: absolute
+    top: 0
+    left: 0
+    +xs
+      position: static
+      margin-bottom: 10px
+  &__img
+    box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.2)
+    background-color: $white
+    padding-top: 70%
+    position: relative
+    margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    img
+      position: absolute
+      max-width: 90%
+  &__title
+    margin-bottom: 5px
+  &__img-bottom-right
+    img
+      bottom: 0
+      right: 0
+  &__img-center
+    img
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)

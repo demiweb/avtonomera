@@ -1,0 +1,31 @@
+{% import "../../data/_delivery.html" as delivery %}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__block">
+      <div class="section__title">
+        <h2 class="title">Как осуществляем <span class="accent">доставку</span></h2>
+      </div>
+
+      <div class="section__subttl">Компания «Avtonomera» предлагает для водителей Украины большой
+      выбор автономеров разных стран, годов и типов</div>
+      {% set items = delivery.first %}
+      {% include "partials/_delivery.html" %}
+    </div>
+
+    <div class="section__block">
+      <div class="section__title">
+        <h2 class="title">Как принимаем <span class="accent">оплату</span></h2>
+      </div>
+
+      <div class="section__subttl">Компания «Avtonomera» работает по 100% предоплате,
+      вне зависимости от способов оплаты</div>
+      
+      {% set items = delivery.second %}
+      {% include "partials/_delivery.html" %}
+    </div>
+    
+  </div>
+</section>
+<!-- end section -->

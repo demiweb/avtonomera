@@ -1,0 +1,30 @@
+---
+title: advantages
+page: advantages
+hero: {
+  bg: 'bg-hero-number.jpg',
+  left: {
+    mod: 'col-lg-4 col-md-6 col-sm-6'
+  },
+  right: {
+    mod: 'col-lg-8 col-md-6 col-sm-6'
+  },
+  title: 'Автономера',
+  text: 'Наши дубликаты автономеров изготавливаются официально
+на сертифицированном производстве и обладают 
+всеми необходимыми степенями защиты.',
+  btns: [
+    {
+      title: 'Заказать автономера'
+    }
+  ],
+  img: 'hero-img-number.png'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-number.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

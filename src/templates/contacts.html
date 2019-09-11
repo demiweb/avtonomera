@@ -1,0 +1,29 @@
+---
+title: contacts
+page: contacts
+hero: {
+  bg: 'bg-hero-contacts.jpg',
+  left: {
+    mod: 'col-xl-4 col-lg-6 col-md-6 col-sm-6'
+  },
+  right: {
+    mod: 'col-xl-4 col-lg-6 col-md-6 col-sm-6 offset-xl-2'
+  },
+  title: 'Контакты',
+  text: 'Компания «Avtonomera» работает по полной предоплате.
+Доставляет номера по Киеву курьером и по Украине
+Новой Почтой.',
+  btns: [
+    {
+      title: 'Посмотреть контакты'
+    }
+  ],
+  form: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

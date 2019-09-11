@@ -1,0 +1,68 @@
+---
+title: advantages
+page: advantages
+hero: {
+  bg: 'bg-hero-advantages.jpg',
+  left: {
+    mod: 'col-lg-4 col-md-6 col-sm-6'
+  },
+  right: {
+    mod: 'col-lg-8 col-md-6 col-sm-6'
+  },
+  title: 'Преимущества',
+  text: 'Компания «Avtonomera» работает на рынке с 1997 года 
+и за это время мы поняли, как важно оказывать 
+качественные услуги нашим клиентам',
+  btns: [
+    {
+      title: 'Заказать автономера'
+    }
+  ],
+  img: 'hero-img-advantages.png'
+}
+features: {
+  list: [
+    {
+      icon: 'like',
+      title: 'Качественное',
+      text: 'изготовление номеров
+с гарантией'
+    },
+    {
+      icon: 'clock',
+      title: 'Быстрое',
+      text: 'производство новых и замена
+старых номеров'
+    },
+    {
+      icon: 'document',
+      title: 'Официальное',
+      text: 'выполнение всех работ,
+оформление не займет больше 20 минут'
+    },
+    {
+      icon: 'vip',
+      title: 'Индивидуальное',
+      text: 'изготовление по желанию'
+    },
+    {
+      icon: 'purse',
+      title: 'Конкурентноспособное',
+      text: 'ценообразование на наши услуги'
+    },
+    {
+      icon: 'box',
+      title: 'Удобная',
+      text: 'система оплаты и доставки'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-view.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

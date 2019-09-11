@@ -1,0 +1,25 @@
+<!-- begin delivery -->
+<div class="delivery">
+  {% for i in items %}
+  <div class="delivery__item">
+    <!-- begin delivery-item -->
+    <div class="delivery-item">
+      <div class="delivery-item__nmb number">{{ i.nmb }}</div>
+
+      <div class="delivery-item__img{% if i.imgMod %} {{ i.imgMod }}{% endif %}">
+        <img class="js-lazy" alt="" data-src="./img/delivery/{{ i.img }}"/>
+      </div>
+
+      <div class="delivery-item__content">
+        <div class="delivery-item__title">
+          <div class="title title--h3">{{ i.title | safe }}</div>
+        </div>
+
+        <div class="delivery-item__text">{{ i.text | safe }}</div>
+      </div>
+    </div>
+    <!-- end delivery-item -->
+  </div>
+  {% endfor %}
+</div>
+<!-- end delivery -->

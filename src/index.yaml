@@ -2,3 +2,7 @@ ProjectTitle: avtonomera
 
 PageList:
 - file: home.html
+- file: advantages.html
+- file: contacts.html
+- file: delivery.html
+- file: number.html

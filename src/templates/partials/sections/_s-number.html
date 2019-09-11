@@ -1,0 +1,51 @@
+{% import "../../data/_number.html" as numberTypes %}
+
+{%set
+blocks = [
+  {
+    title: 'Стандартные <span class="accent">номера</span>',
+    types : numberTypes.standart
+  },
+  {
+    title: 'Европейские <span class="accent">номера</span>',
+    types : numberTypes.europe
+  },
+  {
+    title: 'Американские <span class="accent">номера</span>',
+    types : numberTypes.american
+  },
+  {
+    title: 'Именные <span class="accent">номера</span>',
+    types : numberTypes.unic
+  },
+  {
+    title: 'Мото <span class="accent">номера</span>',
+    types : numberTypes.moto
+  },
+  {
+    title: 'Номера на <span class="accent">прицеп</span>',
+    types : numberTypes.trailer
+  },
+  {
+    title: 'Номера на <span class="accent">грузовик</span>',
+    types : numberTypes.truck
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    {% for i in blocks %}
+      <div class="section__block">
+        <div class="section__title section__title-mb-lg">
+          <h2 class="title">{{ i.title | safe }}</h2>
+        </div>
+        
+        {% set types = i.types %}
+        {% include "partials/_types.html" %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section -->

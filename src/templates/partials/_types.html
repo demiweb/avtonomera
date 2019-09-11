@@ -1,0 +1,27 @@
+<!-- begin types -->
+<div class="types">
+  <div class="row justify-content-center">
+    {% for i in types %}
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <!-- begin type-link -->
+      <a href="#" class="type-link{% if i.mod %} {{ i.mod }}{% endif %}">
+        <span class="type-link__content">
+          <span class="type-link__title">
+            <span class="title title--h5">{{ i.title | safe }}</span>
+          </span>
+
+          <span class="type-link__img js-lazy" data-background-image="./img/types/{{ i.img }}">
+            {# <img class="js-lazy" alt="" data-src="./img/types/{{ i.img }}"/> #}
+          </span>
+        </span>
+
+        <span class="type-link__price">
+          <span class="price">{{ i.price | safe }}</span>
+        </span>
+      </a>
+      <!-- end type-link -->
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end types -->

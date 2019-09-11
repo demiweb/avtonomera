@@ -2,7 +2,7 @@
 <section class="hero js-lazy" data-background-image="./img/hero/{{ hero.bg }}">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="{% if hero.left.mod %}{{ hero.left.mod }}{% else %}col-sm-6{% endif %}">
         <div class="hero__content">
           {% if hero.title %}
           <div class="hero__title">
@@ -33,10 +33,17 @@
         </div>
       </div>
 
-      <div class="col-sm-6">
-        <div class="hero__img">
-          <img class="js-lazy" alt="" data-src="./img/{{ hero.img }}"/>
+      <div class="{% if hero.right.mod %}{{ hero.right.mod }}{% else %}col-sm-6{% endif %}">
+        {% if hero.img %}
+        <div class="hero__right{% if hero.right.blockMod %} {{ hero.right.blockMod }}{% endif %}">
+          <img class="js-lazy" alt="" data-src="./img/hero/{{ hero.img }}"/>
         </div>
+        {% endif %}
+        {% if hero.form %}
+        <div class="hero__right">
+          {% include "partials/_form.html" %}
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>

@@ -8,13 +8,13 @@
   +sm
     padding-top: $header-height-sm
   +xs
-    padding-bottom: 15px
+    // padding-bottom: 15px
   &__content
     +flex(center, normal, column)    
     padding-top: 25px
     padding-bottom: 25px
     +xs
-      margin-bottom: 15px
+      // margin-bottom: 15px
     html:not(.is-ie) &
       min-height: calc(100vh - #{$header-height})
       +sm
@@ -27,9 +27,17 @@
         height: calc(100vh - #{$header-height-sm})
       +xs
         height: auto
-  &__img
+  &__right
     +flex(center, normal, column)
     height: 100%
+    padding-top: 25px
+    padding-bottom: 25px
+    img
+      object-fit: contain
+  &__right-bottom
+    padding-top: 0
+    padding-bottom: 0
+    justify-content: flex-end
   &__title
     margin-bottom: 25px
     +md

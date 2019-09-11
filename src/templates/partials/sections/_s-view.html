@@ -1,0 +1,57 @@
+{%set
+els = [
+  {
+    nmb: '1',
+    text: 'Защитные элементы
+по всем требованиям ГОСТ'
+  },
+  {
+    nmb: '3',
+    text: 'Высококачественная
+светоотражающая пленка'
+  },
+  {
+    nmb: '2',
+    text: 'Логотип производителя
+дубликата номерного знака'
+  },
+  {
+    nmb: '4',
+    text: 'Алюминевая пластина'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title">Как выглядят качественные <span class="accent">автономера?</span></h2>
+    </div>
+
+    <div class="section__subttl">
+      Компания «Avtonomera» предоставляет только качественные и лицензионные номера. 
+Получайте только проверенные номера 
+без риска подделки!
+    </div>
+
+    <!-- begin number-els -->
+    <div class="number-els">
+      <div class="number-els__img js-lazy" data-background-image="./img/number.png"></div>
+
+      <div class="number-els__els">
+        {% for i in els %}
+        <!-- begin number-el -->
+        <div class="number-el{% if i.mod %} {{ i.mod }}{% endif %}">
+          <div class="number-el__nmb number">{{ i.nmb | safe }}</div>
+
+          <div class="number-el__text">{{ i.text | safe }}</div>
+        </div>
+        <!-- end number-el -->
+        {% endfor %}
+      </div>      
+    </div>
+    <!-- end number-els -->
+  </div>
+</section>
+<!-- end section -->

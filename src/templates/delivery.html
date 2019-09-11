@@ -1,0 +1,31 @@
+---
+title: delivery
+page: delivery
+hero: {
+  bg: 'bg-hero-delivery.jpg',
+  left: {
+    mod: 'col-lg-4 col-md-6 col-sm-6'
+  },
+  right: {
+    mod: 'col-lg-8 col-md-6 col-sm-6',
+    blockMod: 'hero__right-bottom'
+  },
+  title: 'Доставка и оплата',
+  text: 'Компания «Avtonomera» работает по полной предоплате.
+Доставляет номера по Киеву курьером и по Украине
+Новой Почтой.',
+  btns: [
+    {
+      title: 'Заказать автономера'
+    }
+  ],
+  img: 'hero-img-delivery.png'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-delivery.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

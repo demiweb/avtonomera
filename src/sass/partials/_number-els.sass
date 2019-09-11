@@ -1,0 +1,108 @@
+.number-els
+  max-width: 770px
+  margin-left: auto
+  margin-right: auto
+  
+  
+  position: relative
+  &__img
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    top: 40%
+    width: 65%
+    padding-top: 18%
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    z-index: 0
+    pointer-events: none
+    +xs
+      display: none
+  &__els
+    position: relative
+    z-index: 1
+    min-height: 305px
+    +xs
+      min-height: 0
+      margin-left: -5px
+      margin-right: -5px
+      +flex(space-between, space-between, row, wrap)
+
+.number-el
+  $this: &
+  position: absolute
+  width: 225px
+  +xs
+    position: relative
+    width: calc(50% - 10px)
+    margin-right: 5px
+    margin-left: 5px
+    margin-bottom: 15px
+  +before
+    border-top: 1px solid  $c-text
+    width: 65px
+    position: absolute
+    +sm
+      display: none      
+  +after
+    position: absolute
+    width: 80px
+    border-top: 1px solid  $c-text
+    +rotate(60)
+    +sm
+      display: none
+  &:nth-child(even)
+    #{$this}__nmb, #{$this}__text
+      margin-left: auto
+      +xs
+        // margin-left: 0
+  &:nth-child(1)
+    top: 0
+    left: 0
+    +before
+      top: 80px
+      left: calc(100% + 10px)
+    +after
+      left: calc(100% + 10px + 65px)
+      top: 80px
+      transform-origin: top left
+  &:nth-child(2)
+    top: 0
+    right: 0
+    +before
+      top: 80px
+      right: calc(100% + 10px)
+    +after
+      right: calc(100% + 10px + 65px)
+      top: 80px
+      +rotate(-60)
+      transform-origin: top right
+  &:nth-child(3)
+    bottom: 0
+    left: 0
+    +before
+      bottom: 10px
+      left: calc(100% + 10px)
+    +after
+      bottom: 10px
+      left: calc(100% + 10px + 65px)
+      transform-origin: top left
+      +rotate(-60)
+  &:nth-child(4)
+    bottom: 0
+    right: 0
+    +before
+      bottom: 10px
+      right: calc(100% + 10px)
+    +after
+      bottom: 10px
+      right: calc(100% + 10px + 65px)
+      transform-origin: top right
+  &__text
+    max-width: 225px
+  &__nmb
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+    

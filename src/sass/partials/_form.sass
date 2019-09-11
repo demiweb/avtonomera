@@ -1,0 +1,43 @@
+.form
+  background-color: $white
+  padding: 55px 40px 40px
+  color: $c-text
+  +xl
+    padding: 40px
+  +lg
+    padding: 30px
+  +md
+    padding: 20px
+  &__title, &__subttl
+    text-align: center
+  &__title
+    margin-bottom: 5px
+  &__subttl
+    margin-bottom: 40px
+    +xl
+      margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+  &__field
+    +notlast
+      margin-bottom: 35px
+      +lg
+        margin-bottom: 20px
+      +md
+        margin-bottom: 10px
+
+.input, .textarea
+  font-size: $fz-xs
+  input, textarea
+    width: 100%
+    border: 0
+    border-bottom: 1px solid  $gray
+    height: 32px
+    padding: 5px 0
+    +tr(border-color .3s)
+    +placeholder
+      color: inherit
+    &:focus
+      border-color: $accent

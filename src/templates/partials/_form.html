@@ -1,0 +1,72 @@
+{%set
+fields = [
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'Имя',
+    fieldClass: '',
+    fieldAttributes: {}
+  },
+  {
+    name: 'input',
+    type: 'tel',
+    placeholder: '',
+    fieldClass: 'js-mask',
+    fieldAttributes: { 'data-mask-type': 'phone', 'data-mask': '+{38}(000)000-00-00' }
+  },
+  {
+    name: 'textarea',
+    type: '',
+    placeholder: 'Тип номеров или услуги',
+    fieldClass: 'js-textarea',
+    fieldAttributes: {}
+  }
+]
+%}
+
+<!-- begin form -->
+<div class="form">
+  <form>
+    <div class="form__title">
+      <div class="title title--h3">Заполните форму</div>
+    </div>
+
+    <div class="form__subttl">и наш менеджер вам перезвонит</div>
+
+    {% for i in fields %}
+    <div class="form__field">
+      {{ mixins.input(
+        name = i.name,
+        mod = '',
+        type = i.type,
+        placeholder = i.placeholder,
+        value = '',
+        fieldClass = i.fieldClass,
+        fieldAttributes = i.fieldAttributes
+      ) }}
+    </div>
+    {% endfor %}
+
+    <div class="form__field">
+      {{ mixins.btn(
+        title = 'Отправить',
+        mod = 'btn--full',
+        href = false
+      ) }}
+    </div>
+
+    <div class="form__field">
+      {{ mixins.input(
+        name = 'checkbox',
+        mod = '',
+        type = 'checkbox',
+        placeholder = '',
+        value = '',
+        fieldClass = '',
+        label = { span: true, last: 'Я согласен на обработку моих персональных данных' },
+        fieldAttributes = { checked: '' }
+      ) }}
+    </div>
+  </form>
+</div>
+<!-- end form -->
