@@ -1,23 +1,33 @@
 .project-link
-  +flex(flex-end, normal, column)
-  
+  +flex(flex-end, normal, column)  
   color: $white
   height: 100%
   padding: 50px 35px
   padding-top: 125%
+  position: relative
   +cover
   +xl
     padding: 40px 35px
     padding-top: 125%
   +lg
-    padding: 35px
-    padding-top: 125%
-  +md
     padding: 25px
-    padding-top: 125%
+    height: auto
+    padding-top: 15%
+    margin-bottom: 30px
   +sm
     padding: 15px
-    padding-top: 125%
+    padding-top: 30%
+    margin-bottom: 15px
+    // padding-top: 125%
+  +xs
+    padding: 10px
+    padding-top: 30%
+    +before
+      display: block
+  +before
+    +coverdiv
+    z-index: 0
+    background-color: rgba($black, .5)
   &__title
     margin-bottom: 10px
     display: block
@@ -29,3 +39,8 @@
     +notlast
       +md
         margin-bottom: 15px
+      +sm
+        margin-bottom: 10px
+  &__content
+    position: relative
+    z-index: 1

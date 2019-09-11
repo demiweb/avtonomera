@@ -55,3 +55,26 @@ body
     top: -.2em
     +sm
       margin-left: 10px
+
+.side-links
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  width: 80px
+  z-index: 10
+  +flex(center, flex-end, column)
+  &__link
+    display: block
+    margin-bottom: 10px
+    +md
+      margin-bottom: 5px
+    +xs
+      margin-bottom: 0
+    .icon
+      font-size: 65px
+      +md
+        font-size: 45px
+      +xs
+        font-size: 35px
+

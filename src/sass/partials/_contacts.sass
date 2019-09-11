@@ -1,9 +1,13 @@
 .contacts
   &__right
     padding-left: 45px
+    +xl
+      padding-left: 0
   &__left
     +flex(center, normal, column)
     height: 100%
+    +sm
+      margin-bottom: 30px
 
 .contacts-block
   text-align: center
@@ -27,6 +31,9 @@
 .map
   position: relative
   padding-top: 50%
+  background-color: $gray
+  +md
+    padding-top: 60%
   iframe
     +coverdiv
     z-index: 1

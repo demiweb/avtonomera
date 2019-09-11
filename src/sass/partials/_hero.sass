@@ -17,10 +17,14 @@
       margin-bottom: 15px
     html:not(.is-ie) &
       min-height: calc(100vh - #{$header-height})
+      +sm
+        min-height: calc(100vh - #{$header-height-sm})
       +xs
         min-height: 0
     .is-ie &
       height: calc(100vh - #{$header-height})
+      +sm
+        height: calc(100vh - #{$header-height-sm})
       +xs
         height: auto
   &__img

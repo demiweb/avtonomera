@@ -14,6 +14,13 @@
 
     <!-- BEGIN content -->
     <div class="out{% if outClass %} {{ outClass }}{% endif %}">
+      <!-- begin side-links -->
+      <div class="side-links">
+        <a href="viber://chat?number=+380974444444" class="side-links__link">{{ mixins.icon('viber') }}</a>
+
+        <a href="whatsapp://send?phone=+380974444444" class="side-links__link">{{ mixins.icon('whatsapp') }}</a>
+      </div>
+      <!-- end side-links -->
       {% include "partials/_header.html" %}
       <!-- begin main -->
       <main class="main{% if mainClass %} {{ mainClass }}{% endif %}">

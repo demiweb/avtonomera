@@ -1,22 +1,32 @@
 .step
   text-align: center
   &__img
-    background-repeat: no-repeat
-    background-position: 50% 50%
-    background-size: contain
-    padding-top: 60%
     position: relative
     margin-bottom: 30px
     +md
       margin-bottom: 15px
     +before
       border-radius: 50%
-      background-color: $white-dark
+      background-color: $gray-light
       +vcenter
-      z-index: -1
+      z-index: 0
       width: 1em
       height: 1em
       font-size: 210px
+      +md
+        font-size: 150px
+      +sm
+        font-size: 100px
+      +xs
+        font-size: 170px
+  &__img-img
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    padding-top: 60%
+    position: relative
+    z-index: 1
+    
   &__title
     margin-bottom: 10px
     +md
@@ -25,15 +35,20 @@
     a
       color: $blue
       text-decoration: underline
+    br
+      +lg
+        display: none
 
 
 .doc-item
   position: relative
   padding-left: 40px
   text-align: center
+  +xs
+    padding-left: 20px
   &__nmb
-    color: $white-dark
-    font-size: 84px
+    color: $gray-light
+    +css-lock(36, 84, 320, 1399, font-size)
     font-weight: 700
     position: absolute
     left: 0
@@ -46,3 +61,6 @@
     background-size: contain
     padding-top: 60%
     margin-bottom: 15px
+  &__text
+    +lg
+      display: none

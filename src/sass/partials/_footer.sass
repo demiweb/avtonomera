@@ -44,14 +44,30 @@
   &__left
     width: percentage(3/12)
     padding-right: 15px
+    +md
+      width: 100%
+      margin-bottom: 20px
+      // order: 1
   &__right
     width: percentage(9/12)
     padding-left: 15px
-    +flex
+    +flex(flex-start, normal, row, wrap)
+    +md
+      padding-left: 0
+      width: 100%
+      // order: 0
   &__block
     // &:nth-child(1)
     // &:nth-child(2)
     // &:nth-child(3)
     flex: 0 0 240px
+    +lg
+      flex: 0 0 33.33333%
+    +xs
+      flex: 0 0 50%
     &:last-child
       flex-grow: 1
+      +lg
+        flex-grow: initial
+      +xs
+        flex: 0 0 100%

@@ -39,10 +39,12 @@ steps = [
       <div class="steps">
         <div class="row">
           {% for i in steps %}
-          <div class="col-4">
+          <div class="col-sm-4">
             <!-- begin step -->
             <div class="step">
-              <div class="step__img js-lazy" data-background-image="./img/order/{{ i.img }}"></div>
+              <div class="step__img">
+                <div class="step__img-img js-lazy" data-background-image="./img/order/{{ i.img }}"></div>
+              </div>
 
               <div class="step__content">
                 <div class="step__title">
@@ -71,7 +73,7 @@ steps = [
       <!-- begin docs -->
       <div class="docs">
         <div class="row justify-content-center">
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-5 col-6">
             <!-- begin doc-item -->
             <div class="doc-item">
               <div class="doc-item__nmb">1</div>
@@ -82,7 +84,7 @@ steps = [
             <!-- end doc-item -->
           </div>
 
-          <div class="col-3 offset-1">
+          <div class="col-lg-3 offset-lg-1 col-md-4 col-sm-5 col-6">
             <!-- begin doc-item -->
             <div class="doc-item">
               <div class="doc-item__nmb">2</div>
