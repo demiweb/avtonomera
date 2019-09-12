@@ -1,0 +1,32 @@
+---
+title: insurance
+page: insurance
+mainClass: 'main--no-color'
+hero: {
+  bg: 'bg-hero-insurance.jpg',
+  left: {
+    mod: 'col-lg-5 col-md-6 col-sm-6'
+  },
+  right: {
+    mod: 'col-lg-7 col-md-6 col-sm-6'
+  },
+  title: 'Страховка автомобилей',
+  text: 'Компания «Avtonomera» предоставляет страхование для ваших
+автомобилей. За дополнительной информацией обращайтесь
+к нашему консультанту.',
+  btns: [
+    {
+      title: 'Заказать страховку'
+    }
+  ],
+  img: 'hero-img-insurance.png'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-insurance.html" %}
+  {% include "partials/sections/_s-ins-prices.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+{% endblock %}

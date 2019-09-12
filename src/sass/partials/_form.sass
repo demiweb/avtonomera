@@ -27,6 +27,35 @@
         margin-bottom: 20px
       +md
         margin-bottom: 10px
+  &__block
+    max-width: percentage(720/930)
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+    +md
+      max-width: 90%
+    +sm
+      max-width: none
+    +notlast
+      margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+  &__slider
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+
+
+  &--popup
+    padding: 0
+    +xl
+      padding: 0
+    +lg
+      padding: 0
+    +md
+      padding: 0
+    +sm
 
 .input, .textarea
   font-size: $fz-xs
@@ -41,3 +70,26 @@
       color: inherit
     &:focus
       border-color: $accent
+
+.attach
+  position: relative
+  cursor: pointer
+  text-align: left
+  text-decoration: underline
+  display: inline-block
+  +tr(color .3s)
+  +hover
+    color: $accent
+  input[type="file"]
+    position: absolute
+    visibility: hidden
+    opacity: 0
+  .icon
+    position: relative
+    font-size: 1.2em
+    top: .2em
+    margin-right: 5px
+
+.check-item
+  text-align: center
+  &__title

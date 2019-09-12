@@ -12,7 +12,7 @@ function setReady() {
 }
 
 function detectIE() {
-  if (!isIE) {
+  if (isIE) {
     document.documentElement.classList.add('is-ie');
   }
 }

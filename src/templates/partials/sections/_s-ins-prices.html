@@ -1,0 +1,39 @@
+{%set
+prices = [
+  { title: 'Страховка легковых авто', price: 'От <strong>500</strong> грн/мес.' },
+  { title: 'Страховка мопедов', price: 'От <strong>300</strong> грн/мес.' },
+  { title: 'Страховка мотоциклов', price: 'От <strong>100</strong> грн/мес.' },
+  { title: 'Страховка грузовых авто', price: 'От <strong>200</strong> грн/мес.' },
+  { title: 'Страховка мопедов', price: 'От <strong>300</strong> грн/мес.' },
+  { title: 'Страховка прицепов', price: 'От <strong>100</strong> грн/мес.' }
+]
+%}
+
+<!-- begin section -->
+<section class="section pb-0">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title">Цены на <span class="accent">страховку средств передвижения</span></h2>
+    </div>
+
+    <div class="section__subttl">Мы предлагаем для водителей Украины услуги по страхованию автомобилей
+Самые выгодные условия только от компании «Avtonomera»</div>
+
+    <!-- begin prices -->
+    <div class="prices">
+      {% for i in prices %}
+      <div class="prices__item">
+        <!-- begin price-item -->
+        <div class="price-item">
+          <div class="price-item__title">{{ i.title | safe }}</div>
+
+          <div class="price-item__price price">{{ i.price | safe }}</div>
+        </div>
+        <!-- end price-item -->
+      </div>
+      {% endfor %}
+    </div>
+    <!-- end prices -->
+  </div>
+</section>
+<!-- end section -->

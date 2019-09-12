@@ -1,0 +1,172 @@
+{%set
+fields = [
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'Имя',
+    fieldClass: '',
+    fieldAttributes: {}
+  },
+  {
+    name: 'input',
+    type: 'tel',
+    placeholder: '',
+    fieldClass: 'js-mask',
+    fieldAttributes: { 'data-mask-type': 'phone', 'data-mask': '+{38}(000)000-00-00' }
+  },
+  {
+    name: 'textarea',
+    type: '',
+    placeholder: 'Дополнительный комментарий (необязательно)',
+    fieldClass: 'js-textarea',
+    fieldAttributes: {}
+  }
+]
+%}
+
+{%set
+slider = [
+  { title: 'Рамка из металла', price: '<strong>45</strong> грн/шт.' },
+  { title: 'Рамка из пластика', price: '<strong>30</strong> грн/шт.' },
+  { title: 'Рамка из силикона', price: '<strong>55</strong> грн/шт.' },
+  { title: 'Рамка из металла', price: '<strong>45</strong> грн/шт.' },
+  { title: 'Рамка из пластика', price: '<strong>30</strong> грн/шт.' },
+  { title: 'Рамка из силикона', price: '<strong>55</strong> грн/шт.' }
+]
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="order_number">
+  <div class="popup__inner">
+    <button class="popup__close js-popup-close"></button>
+
+    <div class="popup__top">
+      <!-- begin type-top -->
+      <div class="type-top">
+        <div class="type-top__title">Ваш заказ:</div>
+
+        <div class="type-top__content">
+          <div class="type-top__content-title">
+            <div class="title title--h5">Номер 2004 года</div>
+          </div>
+
+          <div class="type-top__img">
+            <img class="js-lazy" alt="" data-src="./img/types/standart/02.png"/>
+          </div>
+        </div>
+      </div>
+      <!-- end type-top -->
+    </div>
+
+    <div class="popup__form">
+      <!-- begin form -->
+      <div class="form form--popup">
+        <form>
+          <div class="form__title">
+            <div class="title title--h3">Оставьте ваши <span class="accent">данные</span></div>
+          </div>
+
+          <div class="form__subttl">Оставьте ваши данные и наш менеджер свяжется <br>
+          с вами для обсуждения деталей</div>
+
+          <div class="form__block">
+
+            {% for i in fields %}
+            <div class="form__field">
+              {{ mixins.input(
+                name = i.name,
+                mod = '',
+                type = i.type,
+                placeholder = i.placeholder,
+                value = '',
+                fieldClass = i.fieldClass,
+                fieldAttributes = i.fieldAttributes
+              ) }}
+            </div>
+            {% endfor %}
+
+            <div class="form__field">
+              <label class="attach">
+                <input type="file">
+                <span>{{ mixins.icon('attachment') }}Прикрепите фото оригиналов техпаспорта и прав (обязательно)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form__slider">
+            <div class="form__title">
+              <div class="title title--h3">Выберите рамку для <span class="accent">номера</span></div>
+            </div>
+
+            <!-- begin slider -->
+            <div class="slider__wrap slider--check-items__wrap">
+              <div class="slider slider--check-items js-slider" data-slider="popup_items">
+                {% for i in slider %}
+                <!-- begin slide -->
+                <div class="slide">
+                  <!-- begin check-item -->
+                  <div class="check-item">
+                    <div class="check-item__label">
+                      {{ mixins.input(
+                        name = 'checkbox',
+                        mod = 'checkbox--lg',
+                        type = 'checkbox',
+                        placeholder = '',
+                        value = '',
+                        fieldClass = '',
+                        label = { span: true, last: '<span class="title title--h5">'+ i.title +'</span><img class="js-lazy" alt="" data-src="./img/frame.png"/>' }
+                      ) }}
+                    </div>
+
+                    <div class="check-item__price price">{{ i.price | safe }}</div>
+                  </div>
+                  <!-- end check-item -->
+                </div>
+                <!-- end slide -->
+                {% endfor %}
+              </div>
+
+              <button class="slider__prev prev js-slider-prev"></button>
+              <button class="slider__next next js-slider-next"></button>
+              {# <div class="slider__nav js-slider-pagination">
+                {% for i in slider %}
+                <button class="slider__bullet"></button>
+                {% endfor %}
+              </div> #}
+            </div>
+            <!-- end slider -->
+          </div>
+
+         <div class="popup__bottom">
+           <div class="popup__amount amount"><span class="title title--h3">Итого:</span> <span class="price"><strong>280</strong> грн</span></div>
+
+           <div class="popup__btn">
+             {{ mixins.btn(
+               title = 'Заказать',
+               mod = 'btn--lg',
+               href = false
+             ) }}
+           </div>
+
+           <div class="popup__checkbox">
+             {{ mixins.input(
+                name = 'checkbox',
+                mod = '',
+                type = 'checkbox',
+                placeholder = '',
+                value = '',
+                fieldClass = '',
+                label = { span: true, last: 'Я согласен на обработку моих персональных данных' },
+                fieldAttributes = { checked: '' }
+              ) }}
+           </div>
+         </div>
+
+
+        </form>
+      </div>
+      <!-- end form -->
+    </div>
+  </div>
+</div>
+<!-- end popup -->

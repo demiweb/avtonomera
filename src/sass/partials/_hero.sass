@@ -17,14 +17,24 @@
       // margin-bottom: 15px
     html:not(.is-ie) &
       min-height: calc(100vh - #{$header-height})
+      min-height: calc((var(--vh, 1vh) * 100) - #{$header-height})
+      +lg
+        min-height: calc(100vh - #{$header-height-lg})
+        min-height: calc((var(--vh, 1vh) * 100) - #{$header-height-lg})
       +sm
         min-height: calc(100vh - #{$header-height-sm})
+        min-height: calc((var(--vh, 1vh) * 100) - #{$header-height-sm})
       +xs
         min-height: 0
     .is-ie &
       height: calc(100vh - #{$header-height})
+      height: calc((var(--vh, 1vh) * 100) - #{$header-height})
+      +lg
+        height: calc(100vh - #{$header-height-lg})
+        height: calc((var(--vh, 1vh) * 100) - #{$header-height-lg})
       +sm
         height: calc(100vh - #{$header-height-sm})
+        height: calc((var(--vh, 1vh) * 100) - #{$header-height-sm})
       +xs
         height: auto
   &__right

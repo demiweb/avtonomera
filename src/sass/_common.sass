@@ -24,6 +24,11 @@ body
   margin-right: auto
   padding-left: 15px
   padding-right: 15px
+
+.main
+  &--no-color
+    .section:nth-child(odd)
+      background-color: $white
     
 .logo
   display: inline-block
@@ -55,6 +60,11 @@ body
     top: -.2em
     +sm
       margin-left: 10px
+
+.no-touch
+  .no-scroll
+    .side-links
+      right: 17px
 
 .side-links
   position: fixed
@@ -100,4 +110,9 @@ body
     z-index: 1
     width: 20px
     height: 10px
+
+.amount
+  +inline-flex(flex-start, center)
+  .price
+    margin-left: 10px
 

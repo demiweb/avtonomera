@@ -37,3 +37,24 @@
         margin-bottom: 40px
       +md
         margin-bottom: 30px
+
+.section-text
+  @extend .row
+  text-align: justify
+  p, ul, ol, h2, h3
+    +notlast
+      margin-bottom: 25px
+      +md
+        margin-bottom: 15px
+  ul
+    li
+      &::before
+        content: '-'
+        display: inline-block
+        margin-right: 5px
+  &__left, &__right
+    @extend .col-sm-6
+    +flex(center, normal, column)
+  &__left
+    +xs
+      margin-bottom: 25px
