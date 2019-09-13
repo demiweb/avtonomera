@@ -7,3 +7,4 @@ PageList:
 - file: delivery.html
 - file: number.html
 - file: insurance.html
+- file: 404.html

@@ -41,6 +41,7 @@
         {% endif %}
         {% if hero.form %}
         <div class="hero__right">
+          {% set form = hero.form %}
           {% include "partials/_form.html" %}
         </div>
         {% endif %}

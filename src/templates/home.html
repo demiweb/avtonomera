@@ -10,11 +10,13 @@ hero: {
 Доставка по Киеву курьером и по Украине Новой Почтой.',
   btns: [
     {
-      title: 'Выбрать автономера'
+      title: 'Выбрать автономера',
+      href: '#'
     },
     {
       title: 'Хочу получить консультацию',
-      mod: 'btn--transp-white'
+      mod: 'btn--transp-white js-popup-open',
+      attributes: { 'data-popup-target': 'call' }
     }
   ],
   img: 'hero-img.png'

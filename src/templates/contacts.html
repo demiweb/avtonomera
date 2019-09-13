@@ -18,7 +18,34 @@ hero: {
       title: 'Посмотреть контакты'
     }
   ],
-  form: true
+  form: {
+    title: 'Заполните форму',
+    subttl: 'и наш менеджер вам перезвонит',
+    btn: { title: 'Отправить' },
+    fields: [
+      {
+        name: 'input',
+        type: 'text',
+        placeholder: 'Имя',
+        fieldClass: '',
+        fieldAttributes: {}
+      },
+      {
+        name: 'input',
+        type: 'tel',
+        placeholder: '',
+        fieldClass: 'js-mask',
+        fieldAttributes: { 'data-mask-type': 'phone', 'data-mask': '+{38}(000)000-00-00' }
+      },
+      {
+        name: 'textarea',
+        type: '',
+        placeholder: 'Тип номеров или услуги',
+        fieldClass: 'js-textarea',
+        fieldAttributes: {}
+      }
+    ]
+  }
 }
 ---
 {% extends "layouts/_layout.html" %}

@@ -1,0 +1,43 @@
+{%set
+form = {
+    title: 'Оставьте ваши <span class="accent">данные</span>',
+    subttl: 'Оставьте ваши данные и наш менеджер 
+свяжется с вами в ближайшее время',
+    btn: { title: 'Заказать звонок' },
+    fields: [
+      {
+        name: 'input',
+        type: 'text',
+        placeholder: 'Имя',
+        fieldClass: '',
+        fieldAttributes: {}
+      },
+      {
+        name: 'input',
+        type: 'tel',
+        placeholder: '',
+        fieldClass: 'js-mask',
+        fieldAttributes: { 'data-mask-type': 'phone', 'data-mask': '+{38}(000)000-00-00' }
+      },
+      {
+        name: 'textarea',
+        type: '',
+        placeholder: 'Ваше сообщение (необязательно)',
+        fieldClass: 'js-textarea',
+        fieldAttributes: {}
+      }
+    ]
+  }
+%}
+
+<!-- begin popup -->
+<div class="popup popup--sm js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close js-popup-close"></button>
+
+    <div class="popup__form">
+      {% include "partials/_form.html" %}
+    </div>
+  </div>
+</div>
+<!-- end popup -->

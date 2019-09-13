@@ -1,39 +1,13 @@
-{%set
-fields = [
-  {
-    name: 'input',
-    type: 'text',
-    placeholder: 'Имя',
-    fieldClass: '',
-    fieldAttributes: {}
-  },
-  {
-    name: 'input',
-    type: 'tel',
-    placeholder: '',
-    fieldClass: 'js-mask',
-    fieldAttributes: { 'data-mask-type': 'phone', 'data-mask': '+{38}(000)000-00-00' }
-  },
-  {
-    name: 'textarea',
-    type: '',
-    placeholder: 'Тип номеров или услуги',
-    fieldClass: 'js-textarea',
-    fieldAttributes: {}
-  }
-]
-%}
-
 <!-- begin form -->
 <div class="form">
   <form>
     <div class="form__title">
-      <div class="title title--h3">Заполните форму</div>
+      <div class="title title--h3">{{ form.title | safe }}</div>
     </div>
 
-    <div class="form__subttl">и наш менеджер вам перезвонит</div>
+    <div class="form__subttl">{{ form.subttl }}</div>
 
-    {% for i in fields %}
+    {% for i in form.fields %}
     <div class="form__field">
       {{ mixins.input(
         name = i.name,
@@ -49,7 +23,7 @@ fields = [
 
     <div class="form__field">
       {{ mixins.btn(
-        title = 'Отправить',
+        title = form.btn.title,
         mod = 'btn--full',
         href = false
       ) }}

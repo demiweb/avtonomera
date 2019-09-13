@@ -1,4 +1,5 @@
 .popup
+  $this: &
   position: fixed
   z-index: 20
   left: 0
@@ -60,3 +61,8 @@
     margin-bottom: 20px
     +md
       margin-bottom: 10px
+
+  &--sm
+    #{$this}__inner
+      max-width: 450px
+
