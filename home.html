@@ -125,10 +125,10 @@
                   <div class="hero__text"> Изготовление автомобильных номеров в Киеве и Украине от 250 грн. Срок изготовления - 5 минут. Быстрое оформление. Доставка по Киеву курьером и по Украине Новой Почтой. </div>
                   <div class="hero__btns">
                     <div class="hero__btn">
-                      <button class="btn">Выбрать автономера</button>
+                      <a href="#" class="btn">Выбрать автономера</a>
                     </div>
                     <div class="hero__btn">
-                      <button class="btn btn--transp-white">Хочу получить консультацию</button>
+                      <button class="btn btn--transp-white js-popup-open" data-popup-target="call">Хочу получить консультацию</button>
                     </div>
                   </div>
                 </div>
@@ -886,7 +886,7 @@
                 </div>
               </div>
               <div class="form__slider">
-                <div class="form__title">
+                <div class="form__title form__title-mb-lg">
                   <div class="title title--h3">Выберите рамку для <span class="accent">номера</span></div>
                 </div>
                 <!-- begin slider -->
@@ -1013,6 +1013,57 @@
                   </label>
                   <!-- end checkbox -->
                 </div>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup popup--sm js-popup" data-popup="call">
+      <div class="popup__inner">
+        <button class="popup__close js-popup-close"></button>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <div class="form__title">
+                <div class="title title--h3">Оставьте ваши <span class="accent">данные</span></div>
+              </div>
+              <div class="form__subttl">Оставьте ваши данные и наш менеджер свяжется с вами в ближайшее время</div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Имя">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input class="js-mask" type="tel" data-mask-type="phone" data-mask="+{38}(000)000-00-00">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin textarea -->
+                <div class="textarea">
+                  <textarea class="js-textarea" placeholder="Ваше сообщение (необязательно)"></textarea>
+                </div>
+                <!-- end textarea -->
+              </div>
+              <div class="form__field">
+                <button class="btn btn--full">Заказать звонок</button>
+              </div>
+              <div class="form__field">
+                <!-- begin checkbox -->
+                <label class="checkbox">
+                  <input type="checkbox" checked="">
+                  <span>Я согласен на обработку моих персональных данных</span>
+                </label>
+                <!-- end checkbox -->
               </div>
             </form>
           </div>
