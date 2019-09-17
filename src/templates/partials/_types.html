@@ -3,6 +3,35 @@
   <div class="row justify-content-center">
     {% for i in types %}
     <div class="col-lg-3 col-md-4 col-sm-6">
+      {% if typesLink %}
+      <!-- begin type-link -->
+      <a href="#" class="type-link{% if i.mod %} {{ i.mod }}{% endif %}">
+        <span class="type-link__content">
+          <span class="type-link__title">
+            <span class="title title--h5">{{ i.title | safe }}</span>
+          </span>
+
+          {# <span class="type-link__img js-lazy" data-background-image="./img/types/{{ i.img }}"> #}
+          <span class="type-link__img">
+            <img class="js-lazy" alt="" data-src="./img/types/{{ i.img }}"/>
+          </span>
+        </span>
+
+        <span class="type-link__price">
+          <span class="price">{{ i.price | safe }}</span>
+        </span>
+
+        <span class="type-link__btn">
+          {{ mixins.btn(
+            title = 'Выбрать автономер',
+            mod = 'btn--full btn--no-hover',
+            href = false,
+            isInline = true
+          ) }}
+        </span>
+      </a>
+      <!-- end type-link -->
+      {% else %}
       <!-- begin type-link -->
       <button class="type-link{% if i.mod %} {{ i.mod }}{% endif %} js-popup-open" data-popup-target="order_number">
         <span class="type-link__content">
@@ -30,6 +59,7 @@
         </span>
       </button>
       <!-- end type-link -->
+      {% endif %}
     </div>
     {% endfor %}
   </div>
