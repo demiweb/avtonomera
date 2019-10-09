@@ -13,8 +13,9 @@ import toggleMenu from './components/toggleMenu';
 import setHeaderOnScroll from './components/setHeaderOnScroll';
 import setInputMask from './components/setInputMask';
 import setTextareaHeight from './components/setTextareaHeight';
-import setPopups from './components/setPopups';
-import setSliders from './components/setSliders';
+// import popup from './components/setPopups';
+import formSlider from './components/setSliders';
+import Popup from './lib/popup';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -25,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
   setHeaderOnScroll();
   setInputMask();
   setTextareaHeight();
-  setPopups();
-  setSliders();
+  // setPopups();
+  // setSliders();
+  // formSlider.init();
 });
+
+window.formSlider = formSlider;
+window.setLazy = setLazy;
+// window.popup = popup;
+window.Popup = Popup;
